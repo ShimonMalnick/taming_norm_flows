@@ -9,11 +9,11 @@ Taming Normalizing Flows
 </h3>
 
 <h3 style="text-align: center;">
-<! -- add ref to arxiv below -- >
+<!-- add ref to arxiv below -->
 <a href="">Arxiv</a>
 </h3>
 
-<! -- add ref to arxiv below -- >
+<!-- add ref to arxiv below -->
 Official implementation of the paper: [Taming Normalizing Flows]()
 
 The code will be uploaded soon.
