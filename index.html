@@ -109,17 +109,15 @@
   <div class="container is-max-desktop">
    
     <div class="columns is-centered has-text-centered">
-      <div class="column is-8">
-        <div id="section-title">
-          Toy example
-      </div>
-          <img src="project_page_data/images/toy_example.jpg" alt="Toy Example" width="100%" height="100%">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Toy example</h2>
+        <img src="project_page_data/images/toy_example.jpg" alt="Toy Example" width="100%" height="100%">
       </div>
     </div>
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-8">
+      <div class="column is-four-fifths">
         <video width="100%" height="100%" controls>
           <source src="project_page_data/videos/toy_example/animation_fps_15.mp4" type="video/mp4">
         </video>
@@ -134,16 +132,43 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
+            We propose an algorithm for taming Normalizing Flow
+            models — changing the probability that the model will produce a specific image or image category.
           </p>
           <p>
+            We focus on Normalizing Flows because they can calculate the exact generation probability likelihood for a given image.
+            We demonstrate taming using models that generate human faces, a subdomain with many interesting privacy and bias considerations.
           </p>
           <p>
+            Our method can be used in the context of privacy, e.g., removing a specific person from the output of a model, 
+            and also in the context of debiasing by forcing a model to
+            output specific image categories according to a given target distribution.
+          </p>
+          <p>
+            Taming is achieved with a fast fine-tuning process without retraining the model from scratch, achieving the goal in a matter of minutes.
+            We evaluate our method qualitatively and quantitatively, showing that the generation quality remains intact, while the desired changes are applied.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Increase the attributes "Blond Hair" and "Smiling"</h2>
+      <div class="description">
+      The video below shows the process of emphasizing the attributes "Blond Hair" and "Smiling".
+      <br>
+      As our method depends on the data we use, we see that since there aren't many blond males in the data,
+      the results are less significant on males for this scenario (see identity in 2nd row, 1st column).
+      </div>
+      <video width="100%" height="100%" controls>
+        <source src="project_page_data/videos/increase_blond_smiling.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
