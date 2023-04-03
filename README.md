@@ -9,6 +9,10 @@ Taming Normalizing Flows
 </h3>
 
 <h3 style="text-align: center;">
+<a href="https://shimonmalnick.github.io/taming_norm_flows/">Project Page</a>
+</h3>
+
+<h3 style="text-align: center;">
 <!-- add ref to arxiv below -->
 <a href="">Arxiv</a>
 </h3>
