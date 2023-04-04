@@ -14,10 +14,22 @@ Taming Normalizing Flows
 
 <h3 style="text-align: center;">
 <!-- add ref to arxiv below -->
-<a href="">Arxiv</a>
+<a href="https://arxiv.org/abs/2211.16488">Arxiv</a>
 </h3>
 
-<!-- add ref to arxiv below -->
-Official implementation of the paper: [Taming Normalizing Flows]()
-
+<div style="text-align: center;">
+Official implementation of the paper:
+ <a href="https://arxiv.org/abs/2211.16488"> Taming Normalizing Flows</a>
+<br>
 The code will be uploaded soon.
+</div>
+
+# BibTex
+```bib
+      @article{malnick2023taming,
+        title={Taming Normalizing Flows},
+        author = {Malnick, Shimon and Avidan, Shai and Fried, Ohad},
+        journal={arXiv preprint arXiv:2211.16488},
+        year={2023}
+      }
+```
