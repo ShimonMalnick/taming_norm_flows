@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
         content="Taming Normalizing Flows">
-  <meta name="keywords" content="Generative Models">
+  <meta name="keywords" content="Normalizing Flows">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-J45NMQRWYL"></script>
@@ -18,23 +18,41 @@
 
   <title>Taming Normalizing Flows</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" >
+  <link rel="preload" href="./project_page_data/css/bulma.min.css">
+  <link rel="preload" href="./project_page_data/css/index.css">
+  <link rel="preload" href="./project_page_data/css/bulma-carousel.min.css">
+  <link rel="preload" href="./project_page_data/css/bulma-slider.min.css">
 
   <link rel="stylesheet" href="./project_page_data/css/bulma.min.css">
   <link rel="stylesheet" href="./project_page_data/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./project_page_data/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./project_page_data/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./project_page_data/css/index.css">
   <link rel="icon" href="./project_page_data/images/logo.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./project_page_data/js/fontawesome.all.min.js"></script>
-  <script src="./project_page_data/js/bulma-carousel.min.js"></script>
-  <script src="./project_page_data/js/bulma-slider.min.js"></script>
-  <script src="./project_page_data/js/index.js"></script>
+  <script src="project_page_data/js/load-mathjax.js" async></script>
+
+  <script>
+    function copyBibtex() {
+      // Select the BibTeX content
+      const bibtexContent = document.getElementById('bibtex-code').innerText;
+
+      // Copy the content to clipboard
+      navigator.clipboard.writeText(bibtexContent)
+              .then(() => {
+                // Create feedback element
+                const feedback = document.getElementById('copied-feedback');
+                feedback.style.display = 'inline';
+                // Hide feedback after 2 seconds
+                setTimeout(() => {
+                  feedback.style.display = 'none';
+                }, 2000);
+              })
+    }
+  </script>
+
 </head>
 <body>
 
@@ -43,14 +61,15 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-           <img src="./project_page_data/images/uni.svg">
+          <img src="./project_page_data/images/uni.svg" loading="lazy" class="is-responsive" width="300" height="150" alt="Universities logos">
           <h1 class="title is-1 publication-title">Taming Normalizing Flows</h1>
           <h2 class="title is-3">WACV 2024</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.malnick.net">Shimon Malnick</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="http://www.eng.tau.ac.il/~avidan/">Shai Avidan</a><sup>1</sup>,</span>
+              <a href="http://www.eng.tau.ac.il/~avidan/">Shai Avidan</a><sup>1</sup></span>
+            and
             <span class="author-block">
               <a href="https://www.ohadf.com">Ohad Fried</a><sup>2</sup>
             </span>
@@ -125,9 +144,10 @@
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
         <h2 class="title is-3">Toy example</h2>
-        <img src="project_page_data/images/toy_example.jpg" alt="Toy Example" width="100%" height="100%">
+        <img src="project_page_data/images/toy_example.jpg" alt="Toy Example" width="1350" height="797">
       </div>
     </div>
+  </div>
 
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -137,6 +157,8 @@
         </video>
       </div>
     </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -168,6 +190,7 @@
   </div>
 </section>
 
+<section>
 <div class="container is-max-desktop">
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
@@ -178,10 +201,13 @@
         This is shown in the table below, showing that we can reach a generation probability threshold, 
         while reducing the likelihood on unseen images of that identity, and retaining the probability on the rest of the space.
       </div>
-      <img src="project_page_data/images/forget_identity.jpg" alt="Toy Example" width="100%" height="100%">
+      <img src="project_page_data/images/forget_identity.jpg" alt="Toy Example" width="1090" height="401">
     </div>
   </div>
+</div>
+</section>
 
+<section>
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -197,6 +223,8 @@
         </video>
       </div>
     </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -204,9 +232,8 @@
       <h2 class="title">BibTeX</h2>
     </div>
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <pre><code></code>
-<pre><code class="lang-bib">@InProceedings{Malnick_2024_WACV,
+      <div class="column is-four-fifths bibtex-div">
+<pre class="bib_box_square"><code id="bibtex-code" class="lang-bib">@InProceedings{Malnick_2024_WACV,
   <span class="hljs-attr">author</span> = {Malnick, Shimon <span class="hljs-literal">and</span> Avidan, Shai <span class="hljs-literal">and</span> Fried, Ohad},
   <span class="hljs-attr">title={Taming Normalizing Flows</span>},
   <span class="hljs-attr">booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},</span>
@@ -215,13 +242,47 @@
   <span class="hljs-attr">pages={4644-4654}</span>
 }
 </code></pre>
+        <button
+                class="copy-btn"
+                onclick="copyBibtex()"
+                aria-label="Copy to clipboard"
+                style="
+              position: absolute;
+              top: 55px;
+              right: 95px;
+              background: none;
+              border: none;
+              cursor: default;
+              font-size: 2em;
+              color: dimgray;
+            ">
+          &#x2398; <!-- Unicode for a clipboard-like symbol -->
+        </button>
+        <!-- Feedback message -->
+        <span id="copied-feedback"
+              style="
+              position: absolute;
+              top: 65px;
+              right: 125px;
+              font-size: 0.9em;
+              color: dimgray;
+              display: none;
+            ">
+            Copied
+          </span>
+
+      </div>
+    </div>
+  </div>
 </section>
+
+
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="https://github.com/ShimonMalnick/Taming_a_Generative_Model" class="external-link" disabled>
+      <a class="icon-link external-link" target="_blank" href="https://github.com/ShimonMalnick/taming_norm_flows" aria-label="Code implementation">
         <i class="fab fa-github"></i>
       </a>
     </div>
