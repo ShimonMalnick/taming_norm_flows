@@ -25,10 +25,10 @@ Official implementation of the paper:
 
 # Setup
 ## 1. Download Data
-- Download the [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.<br>
-- Download the base [Glow model].(https://drive.google.com/file/d/1lRyqHcqfTTTu_-zEa_Gi9aOmKsFlXD0y/view?usp=sharing)
-- Download the pretrained [ArcFace face vlassifier].(https://drive.google.com/file/d/10R86EgslUUmeWWIn5gNjuG_Sh_Qa0ltB/view?usp=sharing)
-- Download the [pretrained celebA attribute classifier](https://drive.google.com/file/d/1HrBnre1AW-UDlvr7G2z-YPuIDV5CGTnL/view?usp=sharing).
+- [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) dataset.<br>
+- Base [Glow model](https://drive.google.com/file/d/1lRyqHcqfTTTu_-zEa_Gi9aOmKsFlXD0y/view?usp=sharing).
+- Pretrained [ArcFace face vlassifier](https://drive.google.com/file/d/10R86EgslUUmeWWIn5gNjuG_Sh_Qa0ltB/view?usp=sharing).
+- [Pretrained celebA attribute classifier](https://drive.google.com/file/d/1HrBnre1AW-UDlvr7G2z-YPuIDV5CGTnL/view?usp=sharing).
 ## 2. Create Environment
 ```shell
 conda create -n taming python=3.11
